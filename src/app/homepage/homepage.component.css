@@ -1,0 +1,42 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+/*This handles the sizing for the background image*/  
+#container{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../homepage/Images/SignInBackground.jpg);
+}
+
+/*This handles the width of the navbar*/
+#navbar{
+  width: 100vw;
+}
+
+/*This sets the width and margin of the table*/
+table {
+  width: 20px;
+  margin-top: 20px;
+}
+
+/*These deal with the style of the table */
+.mat-column-position{
+  width: 10px
+}
+
+.mat-column-name{
+  width: 10px 
+}
+
+.mat-column-weight{
+  width: 10px 
+}
+
+.mat-column-symbol{
+  width: 10px 
+}
+
+.mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
+}

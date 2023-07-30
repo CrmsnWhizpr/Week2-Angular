@@ -1,0 +1,26 @@
+<router-outlet></router-outlet>
+
+<div id="container">
+    <!--This will create a angular card which the form elements can be placed onto-->
+    <mat-card id="SignInForm">
+        <mat-card-title style="margin-left: auto; margin-right: auto;">Sign Up</mat-card-title>
+        <mat-card-header>Username</mat-card-header>
+
+        <!--This is where the user will be asked to enter their username-->
+        <mat-form-field>
+            <mat-label>Enter your Username</mat-label>
+            <input matInput style="margin-right: 10px;">
+        </mat-form-field>
+
+        <mat-card-header>Password</mat-card-header>
+
+        <!--This is where the user will be asked to enter their password-->
+        <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input matInput style="margin-right: 10px;">
+        </mat-form-field>
+
+        <!--This is where the user will be presented with a register button-->
+        <button mat-raised-button color="primary" routerLink="/home">Register</button><br>
+    </mat-card>
+</div>

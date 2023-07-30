@@ -1,0 +1,69 @@
+<router-outlet></router-outlet>
+
+<div id="container">
+    <div id="navbar">
+      <!--This sets the color and positioning of the elements within the navbar-->
+        <mat-toolbar color="warn">
+            <mat-icon>home</mat-icon>Home
+
+            <span class="example-spacer"></span>
+
+            <!--This displays the summary pop out for the website name on the navbar-->
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        ChemistryTable.com
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        {{panelOpenState ? 'Close Me!' : 'Open Me!'}}
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p>This is a website that displays the periodic number, name, weight, and symbol of some periodic elements</p>
+                  </mat-expansion-panel>
+            </mat-accordion>
+
+            <span class="example-spacer"></span>
+
+            <!--This sets the routing link for the login button on the navbar-->
+            <button mat-raised-button color="accent" routerLink="/sign-in">Log In</button>
+          </mat-toolbar>
+    </div>
+
+<div>
+    <!--This creates an angular component table which will store content-->
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef> Weight </th>
+          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef> Symbol </th>
+          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>
+</div>
+
+
+

@@ -1,0 +1,28 @@
+<router-outlet></router-outlet>
+
+<div id="container">
+    <!--This creates a card for the log in form to be put onto-->
+    <mat-card id="SignInForm">
+        <mat-card-title style="margin-left: auto; margin-right: auto;">Log In</mat-card-title>
+        <mat-card-header>Username</mat-card-header>
+
+        <!--This creates and input for the user to add their username into-->
+        <mat-form-field>
+            <mat-label>Enter your Username</mat-label>
+            <input matInput style="margin-right: 10px;">
+        </mat-form-field>
+
+        <mat-card-header>Password</mat-card-header>
+
+        <!--This creates and input for the user to add their password into-->
+        <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input matInput style="margin-right: 10px;">
+        </mat-form-field>
+
+        <!--These are the buttons for navigating to the home page or the sign up page-->
+        <button mat-raised-button color="primary" routerLink="/home">Login</button><br>
+
+        <button mat-raised-button color="primary" routerLink="/sign-up">Sign up</button>
+    </mat-card>
+</div>

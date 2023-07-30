@@ -1,0 +1,39 @@
+/*This will set the size for the background image of the page*/
+#container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../sign-in/Images/SignInBackground.jpg);
+}
+
+/*This will set the style for the sign in form*/
+#SignInForm{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 50%;
+    background-color: aqua;
+}
+
+/*This sets the font-size for the sign up card*/
+mat-card-header{
+    font-size: large;
+}
+
+#registerhead{
+    text-align: center;
+    font-size: large;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*This sets the style for the register button*/
+button{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
